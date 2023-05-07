@@ -20,3 +20,7 @@
     margin: 0;
     display: flex;
 }
+
+.filters-range-input {
+    accent-color: rgb(132,6,200);
+}
