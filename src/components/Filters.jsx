@@ -23,17 +23,21 @@ export function Filters () {
 
   return (
     <section className='filters'>
-      <div>
-        <label htmlFor={minPriceFilterId}>Price</label>
-        <input
-          type='range'
-          id={minPriceFilterId}
-          min='0'
-          max='1000'
-          onChange={handleChangeMinPrice}
-          value={filters.minPrice}
-        />
-        <span>${filters.minPrice}</span>
+      <div className='filters-range-container'>
+        <label htmlFor={minPriceFilterId}>Price:</label>
+        <div className='filters-range'>
+          <label htmlFor={minPriceFilterId}>from</label>
+          <input
+            type='range'
+            className='filters-range-input'
+            id={minPriceFilterId}
+            min='0'
+            max='1000'
+            onChange={handleChangeMinPrice}
+            value={filters.minPrice}
+          />
+          <span>${filters.minPrice}</span>
+        </div>
       </div>
       <div>
         <label htmlFor={categoryFilterId}>Category</label>
@@ -41,6 +45,10 @@ export function Filters () {
           <option value='all'>All</option>
           <option value='laptops'>Laptops</option>
           <option value='smartphones'>Smartphones</option>
+          <option value='home-decoration'>Home decoration</option>
+          <option value='fragrances'>Fragrances</option>
+          <option value='skincare'>Skincare</option>
+          <option value='groceries'>Groceries</option>
         </select>
       </div>
     </section>
